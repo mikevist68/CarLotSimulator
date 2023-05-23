@@ -6,10 +6,30 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            var carLot = new CarLot();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             //TODO
 
-            //Create a seperate class file called Car
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
+            //Create a seperate class file called Car -  done
+            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable - done
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
 
@@ -21,13 +41,51 @@ namespace CarLotSimulator
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
+            // Dot Notation
+            var charger = new Car();
+            charger.Make = "Dodge";
+            charger.Model = "Charger";
+            charger.Year = 1967;
+            charger.EngineNoise = "rumble";
+            charger.HonkNoise = "Honk";
+            charger.IsDriveable = true;
 
-            //*************BONUS X 2*************//
+            carLot.ParkingLot.Add(charger);
 
-            //Create a CarLot class
-            //It should have at least one property: a List of cars
-            //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
-            //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            //Object Initializer Syntax
+            var honda = new Car()
+            {
+                Make = "Honda",
+                Model = "Accord",
+                Year = 2021,
+                EngineNoise = "Rumble",
+                HonkNoise = "Meep",
+                IsDriveable = true
+            };
+
+            carLot.ParkingLot.Add(honda);
+
+            // Using customer constructor
+            var camry = new Car(2021, "Toyota", "Camry", "Vroom", "Horn", false);
+
+            carLot.ParkingLot.Add(camry);
+
+            carLot.CheckCars();
+
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
