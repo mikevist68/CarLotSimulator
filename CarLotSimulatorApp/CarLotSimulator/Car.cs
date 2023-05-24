@@ -8,10 +8,10 @@ namespace CarLotSimulator
     {
         public Car() 
         {
-        
+            CarLot._numberOfCars++;
         
         }
-
+                                               // this is a customer constructor
         public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable) 
         {
             Year = year;
@@ -20,6 +20,8 @@ namespace CarLotSimulator
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
             IsDriveable = isDriveable;
+
+            CarLot._numberOfCars++;
 
         }
 

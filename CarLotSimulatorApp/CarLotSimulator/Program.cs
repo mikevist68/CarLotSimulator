@@ -50,6 +50,8 @@ namespace CarLotSimulator
             charger.HonkNoise = "Honk";
             charger.IsDriveable = true;
 
+            Console.WriteLine($"here is the new number of cars {CarLot._numberOfCars}"); 
+
             carLot.ParkingLot.Add(charger);
 
             //Object Initializer Syntax
@@ -67,6 +69,8 @@ namespace CarLotSimulator
 
             // Using customer constructor
             var camry = new Car(2021, "Toyota", "Camry", "Vroom", "Horn", false);
+
+            Console.WriteLine($"here is the new number of cars {CarLot._numberOfCars}");
 
             carLot.ParkingLot.Add(camry);
 
